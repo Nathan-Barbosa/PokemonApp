@@ -1,0 +1,24 @@
+.main-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .titleGreyBar{
+    max-width: 720px;
+    width: 100%;
+    height: 48px;
+    background: #616161;
+    clip-path: polygon(10% 0, 85% 0, 75% 100%, 20% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    .content-title{
+      padding-right: 1.5rem;
+    }
+    .random-button{
+      background: none;
+      border: none;
+      width: 2rem;
+    }
+  }  
+}

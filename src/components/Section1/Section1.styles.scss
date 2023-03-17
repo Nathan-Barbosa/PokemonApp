@@ -1,0 +1,67 @@
+.section1-content{
+  margin: 1.5rem;
+  border-radius: 2rem;
+
+  .pkm-title{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    h3{
+      margin-right: 2.5rem;
+    }
+  }
+  .pkm-img{
+    margin-top: 24px;
+    width: 411px;
+    height: 411px;
+    left: 161px;
+    top: 523px;
+    background: #F2F2F2;
+    border-radius: 32px;
+  }
+  .img-change-button{
+    display:flex;
+    justify-content: center;
+    .default-img-button{    
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 50px;
+    background: #DC0A2D;
+    margin-right: 35px;
+    }
+    .shiny-img-button{    
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      border-radius: 50px;
+      background: #616161;
+      margin-left: 35px;
+    }
+  }
+   .pkm-type{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .type-1{
+      display: flex;
+      width: 175px;
+      height: 51px;
+      border-radius: 8px;
+      background-color: #F2F2F2;
+      margin-right: 2.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .type-2{
+      display: flex;
+      width: 175px;
+      height: 51px;
+      border-radius: 8px;
+      background: #FAAE3C;
+      margin-right: 2.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+   }
+}
