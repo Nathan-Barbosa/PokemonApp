@@ -1,17 +1,21 @@
-import { FunctionComponent } from "react";
-import { HeaderProps } from "./Header.interface";
+
 import "./Header.styles.scss";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from "react";
 
-export const Header: FunctionComponent<HeaderProps> = ({
+interface HeaderProps{
+  searchPokemon: (pokemonName: string) => void;
+  searchTitle: string;
+  searchDescription: string;
+}
+
+export const Header = ({
   searchTitle,
   searchDescription,
-}) => {
+  searchPokemon
+}: HeaderProps) => {
   const [pkmName, setPkmName] = useState<string>("");
-  function setName() {
-    window.localStorage.setItem("pkmName", pkmName);
-  }
+
   return (
     <>
       <div className="headerMain">
@@ -27,7 +31,7 @@ export const Header: FunctionComponent<HeaderProps> = ({
                 type="text"
                 placeholder="Charizard"
               />
-              <button onClick={setName}>
+              <button onClick={() => searchPokemon(pkmName)}>
                 <AiOutlineSearch />
               </button>
             </div>

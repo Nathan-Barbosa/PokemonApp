@@ -1,31 +1,26 @@
 import "./Section1.styles.scss";
-import { Section1Props } from "./Section1.interface";
-import { FunctionComponent, useEffect, useState } from "react";
 
-export const Section1: FunctionComponent<Section1Props> = ({
-  pkmName,
-  pkmNumber,
-  pkmImg,
-  pkmType1,
-  pkmType2,
-}) => {
-  const getApiData = async () => {
-    const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${pkmName}`
-    ).then((response) => response.json()); // update the state
-    console.log(response);
-  };
-  console.log(getApiData());
+interface Section1Props {
+  pkmData : {
+    name: string;
+    id: number;
+    sprites : string;
+  }
+}
+
+export const Section1 = ({
+  pkmData
+}: Section1Props) => {
   return (
     <>
       <div className="section1-content">
         <div className="pkm-title">
-          <h3>{pkmName}</h3>
-          <p>Nº 6</p>
+          <h3>{pkmData.name}</h3>
+          <p>Nº {pkmData.id}</p>
         </div>
         <div className="pkm-img">
           <img
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+            src={pkmData.sprites}
             alt="Pokemon-image"
           />
           <div className="img-change-button">
