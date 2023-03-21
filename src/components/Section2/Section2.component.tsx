@@ -1,11 +1,9 @@
-import './Section2.styles.scss'
+import "./Section2.styles.scss";
 
-export default function Section2 () {
+export function Section2() {
   return (
     <>
-      <div className="section2-content">
-        
-      </div>
+      <div className="section2-content"></div>
     </>
-  )
+  );
 }
