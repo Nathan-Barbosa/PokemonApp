@@ -7,11 +7,14 @@ interface BodyProps {
     name: string;
     id: number;
     sprites : {
+      "front_default": string;
+      "front_shiny": string;
       versions: {
         "generation-v" : {
           "black-white" : {
             animated : {
               "front_default" : string;
+              "front_shiny": string;
             } 
           }
         }
@@ -24,6 +27,13 @@ interface BodyProps {
           name: string;
         }
       }
+    ];
+    types: [
+      {
+        type: {
+          name: string;
+        }
+      }    
     ]
   }
 }
@@ -31,7 +41,9 @@ export default function Body({ activePkm }: BodyProps) {
   const pkmData = {
     name: activePkm.name,
     id: activePkm.id,
-    sprites: activePkm.sprites.versions["generation-v"]["black-white"].animated["front_default"]
+    sprites: activePkm.sprites.versions["generation-v"]["black-white"].animated["front_default"] ? activePkm.sprites.versions["generation-v"]["black-white"].animated["front_default"] : activePkm.sprites["front_default"],
+    spritesShiny: activePkm.sprites.versions["generation-v"]["black-white"].animated["front_shiny"] ? activePkm.sprites.versions["generation-v"]["black-white"].animated["front_shiny"] : activePkm.sprites["front_shiny"],
+    types: activePkm.types
   }
 
   return (

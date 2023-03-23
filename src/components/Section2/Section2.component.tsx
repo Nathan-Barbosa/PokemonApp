@@ -14,7 +14,6 @@ interface Section2Props {
 export const Section2 = ({
   pkmStats
 }: Section2Props) => {
-  console.log(pkmStats)
   return (
     <>
       <div className="section2-content">

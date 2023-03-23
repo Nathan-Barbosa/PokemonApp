@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./Section1.styles.scss";
 
 interface Section1Props {
@@ -5,12 +6,27 @@ interface Section1Props {
     name: string;
     id: number;
     sprites : string;
+    spritesShiny: string;
+    types: [
+      {
+        type: {
+          name: string;
+        }
+      }          
+    ]
   }
 }
 
 export const Section1 = ({
   pkmData
 }: Section1Props) => {
+
+  const [ changeSprite , setChangeSprite ] = useState<string>("");
+
+  useEffect(() => {
+    setChangeSprite(pkmData.sprites);
+  }, [pkmData])
+  
   return (
     <>
       <div className="section1-content">
@@ -20,18 +36,20 @@ export const Section1 = ({
         </div>
         <div className="pkm-img">
           <img
-            src={pkmData.sprites}
+            src={changeSprite}
             alt="Pokemon-image"
           />
           <div className="img-change-button">
-            <div className="default-img-button"></div>
-            <div className="shiny-img-button"></div>
+            <div className="default-img-button" onClick={() => setChangeSprite(pkmData.sprites)}></div>
+            <div className="shiny-img-button" onClick={() => setChangeSprite (pkmData.spritesShiny)}></div>
           </div>
         </div>
 
         <div className="pkm-type">
-          <div className="type-1">Voador</div>
-          <div className="type-2">Fogo</div>
+          {pkmData.types.map((item, i) => (
+              <div className={"type-"+item.type.name} key={i}>{item.type.name}</div>
+            ))          
+          }          
         </div>
       </div>
     </>

@@ -12,6 +12,8 @@
     align-items: center;
     justify-content: center;    
 
+
+    cursor: pointer;
     .content-title{
       padding-right: 1.5rem;
     }
@@ -19,6 +21,7 @@
       background: none;
       border: none;
       width: 2rem;
+      cursor: pointer;
     }
   }  
 }

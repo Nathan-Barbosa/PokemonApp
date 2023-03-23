@@ -9,7 +9,7 @@ function App() {
   const [ activePkm, setActivePkm ] = useState(null);
 
   function searchPokemon(pokemonName: string){
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`)
     .then(response => response.json()).then(data => setActivePkm(data));   
     console.log(activePkm);
   }
@@ -26,7 +26,7 @@ function App() {
   ou usando o número da Pokédex Nacional."
       />
       <Greybar />
-      <Titlegreybar />
+      <Titlegreybar searchPokemon={searchPokemon}/>
       {activePkm && <Body activePkm={activePkm}/>}
     </>
   );
