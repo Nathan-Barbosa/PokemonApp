@@ -1,7 +1,27 @@
 .section2-content{
-  width: 400px;
-  height: 550px;
-  background-color: #F2F2F2;
-  margin: 1.5rem;
-  border-radius: 2rem;
+  width: 600px;
+  height: 400px;
+  margin-top: -60px;
+  h1{
+    color:black;
+  }
+
+  .status{
+    max-width: 100%;  
+    margin: .5rem;
+    padding: 1.5rem;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 250px 250px;
+    font-size:24px;
+    .attributes{
+      margin: 1.5rem;
+      padding: .3rem;  
+      
+      .attribute-value{
+        margin-top: 15px;
+        color: #DC0A2D;
+      }
+    }
+  }
 }

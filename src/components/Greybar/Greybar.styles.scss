@@ -1,5 +1,8 @@
 .greyBar{
-  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   height: 48px;
   background: #616161;
 }

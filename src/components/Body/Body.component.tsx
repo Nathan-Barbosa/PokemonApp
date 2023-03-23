@@ -17,6 +17,7 @@ interface BodyProps {
         }
       }
     }
+
   }
 }
 export default function Body({ activePkm }: BodyProps) {
