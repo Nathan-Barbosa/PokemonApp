@@ -16,8 +16,15 @@ interface BodyProps {
           }
         }
       }
-    }
-
+    };
+    stats: [
+      {
+        base_stat: number;
+        stat: {
+          name: string;
+        }
+      }
+    ]
   }
 }
 export default function Body({ activePkm }: BodyProps) {
@@ -26,11 +33,12 @@ export default function Body({ activePkm }: BodyProps) {
     id: activePkm.id,
     sprites: activePkm.sprites.versions["generation-v"]["black-white"].animated["front_default"]
   }
+
   return (
     <>
       <div className="body">
         <Section1 pkmData={pkmData} />
-        <Section2 />
+        <Section2 pkmStats={activePkm.stats}/>
       </div>
     </>
   );

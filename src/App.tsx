@@ -11,10 +11,11 @@ function App() {
   function searchPokemon(pokemonName: string){
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then(response => response.json()).then(data => setActivePkm(data));   
+    console.log(activePkm);
   }
   useEffect(() => {
     searchPokemon("1");
-    console.log(activePkm);
+
   }, [])
   return (
     <>
