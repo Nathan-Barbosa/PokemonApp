@@ -1,27 +1,39 @@
 .section1-content{
-  margin: 1.5rem;
-  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 94px;
 
   .pkm-title{
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     h3{
       margin-right: 2.5rem;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 140%;
+      text-transform: capitalize;
+    }
+    p{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 140%;
     }
   }
   .pkm-img{
     margin-top: 24px;
-    width: 411px;
     height: 411px;
-    left: 161px;
-    top: 523px;
     background: #F2F2F2;
     border-radius: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     img{
       position: absolute;
       width: 150px;
@@ -30,208 +42,98 @@
   }
   .img-change-button{
     display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    .default-img-button{    
+    justify-content: space-between;
     position: absolute;
-    width: 19px;
-    height: 19px;
-    border-radius: 50px;
-    background: #DC0A2D;
-    margin-right: 35px;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 48px;
+    width: 100%;
+    .default-img-button{    
+      width: 19px;
+      height: 19px;
+      border-radius: 50px;
+      background: #DC0A2D;
+      
     }
     .shiny-img-button{    
-      position: absolute;
       width: 19px;
       height: 19px;
       border-radius: 50px;
       background: #616161;
-      margin-left: 35px;
+      
     }
   }
    .pkm-type{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 50px;
-    .type-normal{
+
+    & .type-button {
       display: flex;
       width: 175px;
       height: 51px;
       border-radius: 8px;
-      background-color: #A8A878;
-      margin-right: 2.5rem;
       justify-content: center;
       align-items: center;
+    }
+     .type-normal{
+      background: #A8A878;
     }
     .type-fire{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #FAAE3C;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-grass{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #78C850;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-fairy{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #EE99AC;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-steel{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #B8B8D0;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-dark{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #705848;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-ground{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #E0C068;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-flying{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #A890F0;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-rock{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #B8A038;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-fighting{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #C03028;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-poison{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #A040A0;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
-    .type-eletric{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
+    .type-electric{
       background: #F8D030;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-bug{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #A8B820;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-dragon{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #7038F8;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-ice{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #98D8D8;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-ghost{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #705898;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-water{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #6890F0;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
     .type-psychic{
-      display: flex;
-      width: 175px;
-      height: 51px;
-      border-radius: 8px;
       background: #E0C068;
-      margin-right: 2.5rem;
-      justify-content: center;
-      align-items: center;
     }
    }   
+
+   @media (max-width: 1024) {
+    margin-right: 0;
+   }
 }

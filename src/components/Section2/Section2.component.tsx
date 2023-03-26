@@ -17,7 +17,7 @@ export const Section2 = ({
   return (
     <>
       <div className="section2-content">
-        <h1>Status</h1>
+        <h2>Status</h2>
         <div className="status">
           {pkmStats.map((i) => (
             <div className="attributes" key={i.stat.name}>

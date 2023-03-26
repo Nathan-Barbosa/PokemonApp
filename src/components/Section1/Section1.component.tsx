@@ -47,7 +47,7 @@ export const Section1 = ({
 
         <div className="pkm-type">
           {pkmData.types.map((item, i) => (
-              <div className={"type-"+item.type.name} key={i}>{item.type.name}</div>
+              <div className={`type-button type-${item.type.name}`} key={i}>{item.type.name}</div>
             ))          
           }          
         </div>

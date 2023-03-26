@@ -1,6 +1,5 @@
 import './Titlegreybar.styles.scss'
 import Logo from '../../../public/icons8-pokeball-48.png'
-import { useState } from 'react'
 
 
 interface TitlegreybarProps{
